@@ -5,7 +5,10 @@
 body{
     @include center;
     background-color: map-get($shades-of-blue, very-dark-blue);
-    min-height: 150vh;
+
+    @include desktop{
+        min-height: 100vh;
+    }
 }
 
 main{
@@ -15,6 +18,12 @@ main{
     grid-auto-rows: 50px;
     height: max-content;
     width: 80%;
+    margin: 50px auto;
+
+    @include desktop{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(6, 50px);
+    }
 
     header{
         @include round;
@@ -24,6 +33,11 @@ main{
         box-shadow: 0 0 4px 4px darken(color(dark-blue), 10%);
         position: relative;
         
+        @include desktop{
+            grid-column: span 1;
+            grid-row: 1/-1;
+        }
+
         .profile{
             @include round;
             display: flex;
@@ -39,12 +53,30 @@ main{
                     color : color(pale-blue);
                     font-size: 1rem;
                     font-weight: weight(bolder);
+
+                    @include desktop{
+                        font-size: 1.2rem;
+                    }
                 }
 
                 h2{
                     color: $white;
                     font-size: 1.5rem;
                     font-weight: weight(lighter);
+
+                    @include desktop{
+                        font-size: 2.5rem;
+                    }
+                }
+            }
+
+            @include desktop {
+                @include column;
+                // justify-content: flex-start;
+                align-items: flex-start;
+
+                img{
+                    margin: 2rem 0;
                 }
             }
         }
@@ -69,6 +101,11 @@ main{
                 align-items: center;
                 justify-content: space-between;
 
+                @include desktop{
+                    @include column;
+                    align-items: flex-start;
+                }
+
                 li{
 
                     button{
@@ -77,6 +114,7 @@ main{
                         color: color(desaturated-blue);
                         font-size: 1.2rem;
                         font-weight: weight(regular);
+
 
                         &:hover{
                             @include transition;
@@ -98,6 +136,10 @@ main{
         grid-row: span 3;
         position: relative;
         box-shadow: 0 0 2px 2px darken(color(dark-blue), 10%);
+
+        @include desktop{
+            grid-row: span 3;
+        }
 
         >img{
             position: absolute;
@@ -137,6 +179,11 @@ main{
                 align-items: center;
                 margin: 20px 0;
 
+                @include desktop{
+                    @include column;
+                    align-items: flex-start;
+                }
+
                 .current-value{
                     font-size: 2rem;
                     color: $white;
@@ -146,6 +193,10 @@ main{
                 .previous-value{
                     font-size: 14px;
                     color: color(desaturated-blue);
+
+                    @include desktop{
+                        font-size: 1rem;
+                    }
                 }
             }
         }

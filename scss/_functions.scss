@@ -9,6 +9,14 @@
 @mixin transition {
     transition: .3s all ease-in-out;
 }
+@mixin desktop{
+    @media screen and (min-width: 1136px) {
+        @content;
+    }
+}
+@mixin column{
+    flex-direction: column;
+}
 
 @function background($color){
     @return map-get($background-color, $color);
