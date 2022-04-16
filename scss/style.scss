@@ -15,14 +15,14 @@ main{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     gap: 1.5rem;
-    grid-auto-rows: 50px;
+    grid-auto-rows: 55px;
     height: max-content;
     width: 80%;
     margin: 50px auto;
 
     @include desktop{
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(6, 50px);
+        grid-template-rows: repeat(6, 70px);
     }
 
     header{
@@ -72,7 +72,6 @@ main{
 
             @include desktop {
                 @include column;
-                // justify-content: flex-start;
                 align-items: flex-start;
 
                 img{
@@ -115,7 +114,6 @@ main{
                         font-size: 1.2rem;
                         font-weight: weight(regular);
 
-
                         &:hover{
                             @include transition;
                             color: $white;
@@ -146,17 +144,27 @@ main{
             top: 0;
             right: 0;
             z-index: 1;
+
+            @include desktop{
+                height: 110px;
+                width: 110px
+            }
         }
 
         &__stats{
             @include round;
             height: 140px;
-            margin-top: 58px;
+            margin-top: 78px;
             background-color: color(dark-blue);
             padding: 1rem;
             position: relative;
             z-index: 2;
             @include transition;
+
+            @include desktop{
+                height: 170px;
+                margin-top: 88px;
+            }
 
             &:hover{
                 background-color: lighten(color(dark-blue), 10%);
@@ -188,6 +196,10 @@ main{
                     font-size: 2rem;
                     color: $white;
                     font-weight: weight(lighter);
+
+                    @include desktop{
+                        font-size: 2.5rem;
+                    }
                 }
 
                 .previous-value{
@@ -221,5 +233,4 @@ main{
     .selfcare{
         background-color: background(selfcare);
     }
-
 }

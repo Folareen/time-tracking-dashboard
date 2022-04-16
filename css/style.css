@@ -31,7 +31,7 @@ main {
   -ms-grid-columns: (minmax(210px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 1.5rem;
-  grid-auto-rows: 50px;
+  grid-auto-rows: 55px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -43,8 +43,8 @@ main {
   main {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
-    -ms-grid-rows: (50px)[6];
-        grid-template-rows: repeat(6, 50px);
+    -ms-grid-rows: (70px)[6];
+        grid-template-rows: repeat(6, 70px);
   }
 }
 
@@ -201,16 +201,30 @@ main .track > img {
   z-index: 1;
 }
 
+@media screen and (min-width: 1136px) {
+  main .track > img {
+    height: 110px;
+    width: 110px;
+  }
+}
+
 main .track__stats {
   border-radius: 20px;
   height: 140px;
-  margin-top: 58px;
+  margin-top: 78px;
   background-color: #1c1f4a;
   padding: 1rem;
   position: relative;
   z-index: 2;
   -webkit-transition: .3s all ease-in-out;
   transition: .3s all ease-in-out;
+}
+
+@media screen and (min-width: 1136px) {
+  main .track__stats {
+    height: 170px;
+    margin-top: 88px;
+  }
 }
 
 main .track__stats:hover {
@@ -263,6 +277,12 @@ main .track__stats .track-value .current-value {
   font-size: 2rem;
   color: white;
   font-weight: 300;
+}
+
+@media screen and (min-width: 1136px) {
+  main .track__stats .track-value .current-value {
+    font-size: 2.5rem;
+  }
 }
 
 main .track__stats .track-value .previous-value {
