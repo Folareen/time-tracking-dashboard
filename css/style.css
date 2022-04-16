@@ -37,9 +37,10 @@ main header {
   border-radius: 20px;
   grid-column: 1/ -1;
   grid-row: span 4;
-  background-color: rgba(28, 31, 74, 0.1);
-  -webkit-backdrop-filter: blur(1rem);
-          backdrop-filter: blur(1rem);
+  background-color: #1c1f4a;
+  -webkit-box-shadow: 0 0 4px 4px #0e1025;
+          box-shadow: 0 0 4px 4px #0e1025;
+  position: relative;
 }
 
 main header .profile {
@@ -69,7 +70,6 @@ main header .profile__details h2 {
   color: white;
   font-size: 1.5rem;
   font-weight: 300;
-  letter-spacing: 1px;
 }
 
 main header img {
@@ -123,6 +123,8 @@ main .track {
   border-radius: 20px;
   grid-row: span 3;
   position: relative;
+  -webkit-box-shadow: 0 0 2px 2px #0e1025;
+          box-shadow: 0 0 2px 2px #0e1025;
 }
 
 main .track > img {
@@ -136,7 +138,7 @@ main .track__stats {
   border-radius: 20px;
   height: 140px;
   margin-top: 58px;
-  background-color: rgba(28, 31, 74, 0.1);
+  background-color: #1c1f4a;
   padding: 1rem;
   position: relative;
   z-index: 2;
@@ -145,7 +147,7 @@ main .track__stats {
 }
 
 main .track__stats:hover {
-  background-color: rgba(42, 47, 111, 0.1);
+  background-color: #2a2f6f;
   cursor: pointer;
 }
 
