@@ -2,7 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "rubik";
 }
 
 body {
@@ -15,15 +15,16 @@ body {
 
 main {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  grid-auto-rows: 100px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1.5rem;
+  grid-auto-rows: 50px;
   height: max-content;
   width: 80%;
 }
 main header {
   border-radius: 20px;
-  grid-row: span 2;
+  grid-column: 1/-1;
+  grid-row: span 4;
   background-color: #1c1f4a;
 }
 main header .profile {
@@ -39,19 +40,19 @@ main header .profile__details {
 }
 main header .profile__details h3 {
   color: #bdc1ff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 main header .profile__details h2 {
   color: white;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 1px;
 }
 main header img {
   width: 70px;
   height: 70px;
-  border: 3px solid #bdc1ff;
+  border: 3px solid #6f76c8;
   border-radius: 50%;
 }
 main header nav {
@@ -70,14 +71,83 @@ main header nav ul {
 main header nav ul li button {
   border: none;
   background: none;
-  color: #bdc1ff;
-  font-size: 1.4rem;
+  color: #6f76c8;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 main header nav ul li button:hover {
+  transition: 0.3s all ease-in-out;
   color: white;
   cursor: pointer;
 }
 main header nav ul li .active {
   color: white;
+}
+main .track {
+  border-radius: 20px;
+  grid-row: span 3;
+  position: relative;
+}
+main .track > img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+main .track__stats {
+  border-radius: 20px;
+  height: 140px;
+  margin-top: 58px;
+  background-color: #1c1f4a;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+}
+@inclu &:hover {
+  main .track__stats {
+    background-color: #2a2f6f;
+    cursor: pointer;
+  }
+}
+main .track__stats h2 {
+  font-size: 18px;
+  color: white;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+main .track__stats .track-value {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+main .track__stats .track-value .current-value {
+  font-size: 2rem;
+  color: white;
+  font-weight: 300;
+}
+main .track__stats .track-value .previous-value {
+  font-size: 14px;
+  color: #6f76c8;
+}
+main .work {
+  background-color: #ff8c66;
+}
+main .play {
+  background-color: #56c2e6;
+}
+main .study {
+  background-color: #ff5c7c;
+}
+main .exercise {
+  background-color: #4acf81;
+}
+main .social {
+  background-color: #7536d3;
+}
+main .selfcare {
+  background-color: #f1c65b;
 }

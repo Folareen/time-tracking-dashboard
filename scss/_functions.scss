@@ -6,14 +6,13 @@
 @mixin round {
     border-radius: 20px;
 }
-@mixin absolute {
-    position: absolute;
-    bottom: 0;
+@mixin transition{
+    transition: .3s all ease-in-out;
 }
+
 @function background($color){
     @return map-get($background-color, $color);
 }
-
 @function color($color){
     @return map-get($shades-of-blue , $color);
 }
