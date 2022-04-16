@@ -1,0 +1,116 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0f1424;
+  min-height: 150vh;
+}
+
+main {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1rem;
+  grid-auto-rows: 100px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 80%;
+}
+
+main header {
+  border-radius: 20px;
+  grid-row: span 2;
+  background-color: #1c1f4a;
+}
+
+main header .profile {
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  height: 70%;
+  background-color: #5847eb;
+}
+
+main header .profile__details {
+  margin-left: 1rem;
+}
+
+main header .profile__details h3 {
+  color: #bdc1ff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+main header .profile__details h2 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+main header img {
+  width: 70px;
+  height: 70px;
+  border: 3px solid #bdc1ff;
+  border-radius: 50%;
+}
+
+main header nav {
+  width: 100%;
+  height: 30%;
+  padding: 1rem;
+}
+
+main header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main header nav ul li button {
+  border: none;
+  background: none;
+  color: #bdc1ff;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+main header nav ul li button:hover {
+  color: white;
+  cursor: pointer;
+}
+
+main header nav ul li .active {
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
