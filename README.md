@@ -53,7 +53,7 @@ Users should be able to:
 
 
 ### What I learned
-I learned how to write scss and compile it to css. It was a very interesting process. Also learned more about css grid
+I learned how to write scss and compile it to css. It was a very interesting process. Also practiced more on my css grid skills
 
 
 ### Continued development
