@@ -1,6 +1,7 @@
 @import 'variables';
 @import 'config';
 @import 'functions';
+@import 'mixins';
 
 body{
     @include center;
@@ -23,6 +24,7 @@ main{
     @include desktop{
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(6, 70px);
+        max-width: 1200px;
     }
 
     header{

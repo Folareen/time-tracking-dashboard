@@ -45,6 +45,7 @@ main {
         grid-template-columns: repeat(4, 1fr);
     -ms-grid-rows: (70px)[6];
         grid-template-rows: repeat(6, 70px);
+    max-width: 1200px;
   }
 }
 
