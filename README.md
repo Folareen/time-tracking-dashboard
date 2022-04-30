@@ -50,15 +50,12 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Async fetch of json file
 
 
 ### What I learned
-I learned how to write scss and compile it to css. It was a very interesting process. Also practiced more on my css grid skills
-
-
-### Continued development
-
-**Will work on switching between daily, weekly and monthly stats when i learn how to work with json file in js**
+I learned how to write scss and compile it to css. It was a very interesting process. Also practiced more on my css grid skills.
+Learned how to work with json file by fetching with using async/await function.
 
 
 ## Author
